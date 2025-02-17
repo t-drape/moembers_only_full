@@ -30,3 +30,5 @@ url: https://dev.to/jolouie7/how-to-create-a-login-and-logout-with-devise-6b9
 url: https://michaelsoolee.com/rails-devise-views/
 
 url: https://dev.to/casseylottman/adding-a-field-to-your-sign-up-form-with-devise-10i1
+
+Also, check out the Devise docs!
