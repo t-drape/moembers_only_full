@@ -1,0 +1,20 @@
+<%= form_with model: @post do |form| %>
+  <%= form.hidden_field(:user_id, {value: current_user.id}) %>
+  <%= form.label(:title, "Title") %>
+  <%= form.text_field(:title, {placeholder: "Title"}) %>
+  <%= form.label(:body, "Content") %>
+  <%= form.text_area(:body, {placeholder: "Your text here"}) %>
+  <%= form.submit "Create Post" %>
+<% end %>
+
+<% if @post.errors.any? %>
+  <div id="errors">
+    <h2><%= pluralize(@post.errors.count, "error") %> needs to be satisfied:</h2>
+
+    <ul>
+    <% @post.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
