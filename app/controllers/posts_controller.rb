@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to "/posts#index"
     else
-      render :new, :unprocessable_content
+      render :new, status: :unprocessable_entity
     end
   end
 
